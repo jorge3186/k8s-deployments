@@ -4,24 +4,24 @@ metadata:
   name: kube-sample-deployment
   labels:
     app: kube-sample
-    app-version: $APP_VERSION
+    app-version: APP_VERSION
 spec:
   selector:
     matchLabels:
       app: kube-sample
-      app-version: $APP_VERSION
+      app-version: APP_VERSION
   template:
     metadata:
       labels:
         app: kube-sample
-        app-version: $APP_VERSION
+        app-version: APP_VERSION
     spec:
       containers:
       - name: kube-sample-deployment-pod
         image: jordanalphonso/kube-sample:APP_VERSION
         env:
           - name: APP_VERSION
-            value: $APP_VERSION
+            value: APP_VERSION
         resources:
           limits:
             memory: "128Mi"
@@ -36,10 +36,10 @@ metadata:
   name: kube-sample
   labels:
     app: kube-sample
-    app-version: $APP_VERSION
+    app-version: APP_VERSION
 spec:
   selector:
     app: kube-sample
-    app-version: $APP_VERSION
+    app-version: APP_VERSION
   ports:
   - port: 8080
