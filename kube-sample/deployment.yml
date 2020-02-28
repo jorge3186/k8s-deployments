@@ -20,7 +20,7 @@ spec:
       - name: kube-sample-deployment-pod
         image: jordanalphonso/kube-sample:APP_VERSION
         env:
-          - name: APP_VERSION
+          - name: APPVERSION
             value: APP_VERSION
         resources:
           limits:
